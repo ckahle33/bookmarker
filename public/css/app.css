@@ -1,0 +1,30 @@
+body {
+  font-family: 'Titillium Web', sans-serif; }
+
+.login input.input-block-level {
+  width: 30%;
+  text-align: center;
+  display: block;
+  margin: 1em auto;
+  border: none;
+  padding: 1em;
+  background: #EFEFEF; }
+
+.container {
+  background: #00A2FF;
+  margin: 1em 0; }
+
+.submit {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  background: #00FFFF;
+  border: none; }
+
+.jumbotron {
+  background: #00A2FF; }
+
+.center {
+  display: block;
+  text-align: center;
+  margin: 0 auto; }

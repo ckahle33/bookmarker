@@ -1,0 +1,28 @@
+<html>
+
+<%= include head.ejs %>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				<div class="center">
+					<h1 class="text-center">
+						bookmarker
+					</h1>
+					
+				    <% if (message.length > 0) { %>
+				        <div class="alert alert-danger"><%= message %></div>
+				    <% } %>
+
+					<form class="login" action="/login" method="post">
+						<input class="input-block-level" type="email" name="email" placeholder="Email Address">
+						<input class="input-block-level" type="password" name="password" placeholder="Password">
+
+						<button class="btn btn-large btn-primary submit" type="submit">Sign In </button>
+					</form>
+					<a class="center" href="/sign-up">Sign Up</a>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

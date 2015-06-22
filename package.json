@@ -1,0 +1,29 @@
+{
+  "name": "bookmarker",
+  "version": "0.0.0",
+  "description": "save some bookmarks",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Craig Kahkle",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.12.4",
+    "ejs" : "~0.8.5", 
+    "mongoose" : "~3.8.1",          
+    "passport" : "~0.1.17",     
+    "passport-local" : "~0.1.6",  
+    "connect-flash" : "~0.1.1",   
+    "serve-favicon": "~2.2.1",
+    "logger": "0.0.1",
+    "express-favicon": "~1.0.1",
+    "bcrypt-nodejs" : "latest",
+
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.0",
+    "method-override": "~1.0.0",
+    "express-session": "~1.0.0"  
+  }
+}
