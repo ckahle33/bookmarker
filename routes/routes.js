@@ -30,7 +30,8 @@ module.exports = function(app, passport) {
 
 	app.get('/profile', isLoggedIn, function(req, res){
 		res.render('profile', {
-			user : req.user
+			user : req.user,
+            bookmarks : bookmark.getBookmarks(req.user._id)
 		});
 	});
 
@@ -40,7 +41,13 @@ module.exports = function(app, passport) {
 	});
 
 	app.post('/bookmark', function(req, res){
-		bookmark.createBookmark(req.body.bookmarkName, req.body.bookmarkUrl, req.session.user);
+        console.log(JSON.stringify(req.user._id));
+        if (req.user._id) {
+            bookmark.createBookmark(req.body.bookmarkName, req.body.bookmarkUrl, req.user._id);
+        } else {
+            res.redirect('/');
+        }
+
 		res.redirect('/profile');
 	})
 

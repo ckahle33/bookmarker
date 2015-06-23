@@ -26,12 +26,16 @@
 				    </div>
 				  </div>
 
-
+                </form>
 			</div>
 			<div class="container">
 				<h2>my bookmarks</h2>
 
-				
+                <% for(var i=0; i < bookmarks.length; i++) { %>
+                    <div><%= bookmarks[i].bookmark.name %></div>
+                    <div><%= bookmarks[i].bookmark.url %></div>
+                <% } %>
+
 			</div>
 	</body>
 </html>

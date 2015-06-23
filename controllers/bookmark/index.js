@@ -11,14 +11,21 @@ module.exports = {
 		var bookmark = new Bookmark();
 		bookmark.name = bookmarkName;
 		bookmark.url = bookmarkUrl;
-		bookmark.user = userId;
+		bookmark.user = parseInt(userId);
 
 		bookmark.save(function(err){
 			if (err) {
 				throw err;
 			}
-
 		});
+	},
 
-	}
+    //get all bookmarks from a user
+    getBookmarks : function(userId) {
+        var user = parseInt(userId);
+        var bookmarks = Bookmark.find({user : user}).exec();
+
+        return bookmarks;
+    }
+
 }
